@@ -2,7 +2,6 @@
 
 set -e
 
-mlflow models serve --no-conda \
-    -h 0.0.0.0 \
-    -p 5000 \
-    -m ${MODEL_ARTIFACT_URI}
+export FLASK_APP=/app/mlflow/app.py
+
+python -m flask run --host=0.0.0.0
