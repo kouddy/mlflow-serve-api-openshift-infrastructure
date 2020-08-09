@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,h1 {font-family: "Raleway", Arial, sans-serif}
+        h1 {letter-spacing: 6px}.w3-row-padding img {margin-bottom: 12px}
+    </style>
+
+    <body class="w3-padding-large">
+
+        <header class="w3-panel w3-center w3-opacity w3-mobile" >
+
+          <h1 class="w3-xlarge w3-black w3-mobile">MindfulZen</h1>
+
+          <div class="w3-padding-small">
+            <div class="w3-bar">
+
+              <form class="w3-panel" method="POST" enctype="multipart/form-data">
+              
+                <h2>1. What is your BMI range?</h2>
+                  <label class="radio-inline">
+                    <input type="radio" name="BMI" value=1> Below 25 </input<br>
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="BMI" value=2> Above 25 </input<br>
+                  </label>
+                
+                <h2>2. How Many Days of vacation do you typically lose every year?</h2>
+                  <p>Unused vacation days, lost or carried forward into the following year or because of work stress during your vacation.</p>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=0> Zero </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=1> One </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=2> Two </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=3> Three </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=4> Four </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=5> Five </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=6> Six </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=7> Seven </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=8> Eight </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=9> Nine </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="vacation" value=10> Ten+ </input<br>
+                    </label>
+                    
+                <h2>3. How often do you shout or sulk at someone?</h2>
+                  <p>In a typical week, how often do you express your negative emotion in a active or passive manner?</p>
+                      <label class="radio-inline">
+                        <input type="radio" name="shout" value=0> Zero </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=1> One </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=2> Two </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=3> Three </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=4> Four </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=5> Five </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=6> Six </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=7> Seven </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=8> Eight </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=9> Nine </input<br>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shout" value=10> Ten+ </input<br>
+                    </label>
+                    
+                <p><input class="w3-button w3-gray w3-mobile" type="submit" ></p>
+              </form>
+
+            </div>
+          </div>
+
+        </header>
+
+        <table class="w3-table w3-centered w3-padding-large w3-striped" >
+
+        <tr >
+          <th width="20%">Recommendation</th>
+          <th >Details</th>
+        </tr>
+
+        {% for Data in Data %}
+
+            <tr  align="center">
+                <td width="20%">{{ Data[0] }}</td>
+                <td>{{ Data[1] }}</td>
+            </tr>
+
+        {% endfor %}
+
+      </table>
+
+    <div class="w3-container w3-margin w3-black w3-xlarge"></div>
+
+    </body>
+</html>

@@ -13,6 +13,7 @@ RUN cd /app
 RUN mkdir mlflow
 
 COPY bin/run.sh /app/mlflow/run.sh
+COPY templates /app/mlflow/templates
 COPY app.py /app/mlflow/app.py
 
 RUN chmod 777 /app/mlflow/run.sh
