@@ -15,6 +15,8 @@ RUN mkdir mlflow
 COPY bin/run.sh /app/mlflow/run.sh
 COPY templates /app/mlflow/templates
 COPY app.py /app/mlflow/app.py
+COPY RecomText.csv /app/mlflow/RecomText.csv
+COPY StressRef.csv /app/mlflow/StressRef.csv
 
 RUN chmod 777 /app/mlflow/run.sh
 
